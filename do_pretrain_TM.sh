@@ -1,0 +1,1 @@
+python pretrain_Seg.py --cfg cfg/Bird/Pretrain/Seg.yml

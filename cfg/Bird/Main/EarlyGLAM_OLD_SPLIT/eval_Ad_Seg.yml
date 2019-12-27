@@ -1,0 +1,33 @@
+DATASET_NAME: 'bird'
+SPLIT: '0'  # '0' is old split as in AttnGAN and StackGAN
+DATA_DIR: '../data'
+OUTPUT_DIR: '../output'
+WORKERS: 4
+GPU_ID: '0'
+
+
+CONFIG_NAME: 'Ad_Seg_0'
+ENCODER1: 'Ad'
+ENCODER2: 'Seg'
+ENCODER3: ''
+
+B_VALIDATION: True  # True  # False
+TREE:
+    BRANCH_NUM: 3
+
+TRAIN:
+    FLAG: False
+    NET_G: ''
+        B_NET_D: False
+    BATCH_SIZE: 26
+
+GAN:
+    GNET: 'EarlyGLAM'
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10

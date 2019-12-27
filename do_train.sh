@@ -1,0 +1,1 @@
+python main.py --cfg cfg/Bird/Main/EarlyGLAM/train.yml

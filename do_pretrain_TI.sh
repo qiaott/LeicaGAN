@@ -1,0 +1,1 @@
+python pretrain_TI.py --cfg cfg/Bird/Pretrain/TI.yml

@@ -1,0 +1,40 @@
+DATASET_NAME: 'bird'
+SPLIT: '0'  # '0' is old split as in AttnGAN and StackGAN
+DATA_DIR: '../data'
+OUTPUT_DIR: '../output'
+WORKERS: 4
+GPU_ID: '0'
+
+CONFIG_NAME: 'Ad_Seg_0'
+ENCODER1: 'Ad'
+ENCODER2: 'Seg'
+ENCODER3: ''
+
+TREE:
+    BRANCH_NUM: 3
+TRAIN:
+    FLAG: True
+    NET_G: ''  # if continue training, this is the path to the previous model
+    B_NET_D: True
+    BATCH_SIZE: 32
+    MAX_EPOCH: 700
+    SNAPSHOT_INTERVAL: 50
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    SMOOTH:
+        GAMMA1: 4.0  # 1,2,5 good 4 best  10&100bad
+        GAMMA2: 5.0
+        GAMMA3: 10.0  # 10good 1&100bad
+        LAMBDA: 5.0
+
+GAN:
+
+    GNET: 'EarlyGLAM'
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
